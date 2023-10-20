@@ -75,4 +75,4 @@ while (A < 15) {
     console.log(RandomFruit());
 }
 
-var A = 1
+var A = 2
