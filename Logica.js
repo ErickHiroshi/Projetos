@@ -75,4 +75,3 @@ while (A < 15) {
     console.log(RandomFruit());
 }
 
-var F = Math.random()
