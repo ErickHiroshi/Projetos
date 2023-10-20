@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 36px;
+  padding-right: 34px;
+  padding-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+main section {
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+main h1 {
+  font-size: 45px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+main p {
+  font-size: 16px;
+}
+
+.scrollable-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 1300px;
+  height: 800px;
+  margin-left: 100px;
+  margin-bottom: 150px;
+}
+
+.product {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: calc(30% - 20px);
+  margin-bottom: 20px;
+  max-width: calc(30% - 20px);
+  max-height: calc(60% - 20px);
+}
+
+.product img {
+  max-width: 50%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.product h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333;
+}
+
+.product p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #239d52;
+  font-weight: bold;
+}
+
+.scrollable-section {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.scrollable-section::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollable-section::-webkit-scrollbar-thumb {
+  background-color: #2d2d2d;
+  border-radius: 5px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  font-size: 14px;
+}

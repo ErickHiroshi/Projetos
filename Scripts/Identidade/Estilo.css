@@ -1,0 +1,7 @@
+:root {
+    --CorDoTexto: white;
+}
+
+Body {
+    background-color: var(--CorDoTexto);
+}
