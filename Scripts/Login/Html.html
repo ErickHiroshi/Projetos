@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FnF Logim</title>
-    <link type="stylesheet" href="Css.css">
+    <title>Five Nights at Freddy's Login</title>
+    <link rel="stylesheet" href="Css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,20 +17,28 @@
     </header>
     <main>
 
+        
+
         <label for="email">Email:</label>
-        <input type="email" id="Email" name="Email" autocomplete="on" required />
+        <br>
+        <input type="email" id="Email" name="Email"
+             onkeydown="if(event.keyCode === 13) document.getElementById('Senha').focus()" autocomplete="on" required />
         <br>
         <label for="password">Senha:</label>
-        <input type="password" id="Senha" name="Senha" autocomplete="on" required />
         <br>
-        <button type="submit">Entrar</button>
+        <input type="password" id="Senha" name="Senha"
+            onkeydown="if(event.keyCode === 13) document.getElementById('Botao').click()" autocomplete="on" required />
+        <br>
+        <button onclick="Entrar()" id="Botao" type="submit">Entrar</button>
 
+        
+
+        <p id="footer">© 2023 - Five Nights at Freddy's</p>
 
         <script src="Java.js"></script>
+
     </main>
-    <footer>
-        <p></p>
-    </footer>
+
 </body>
 
 </html>

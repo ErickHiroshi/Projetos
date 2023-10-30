@@ -1,6 +1,83 @@
+body {
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ccec2c45-2f66-4925-808d-0fbd7805bd38/d8jx2y4-9ea7d805-4dbd-460f-867b-c43bdbd0524b.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NjZWMyYzQ1LTJmNjYtNDkyNS04MDhkLTBmYmQ3ODA1YmQzOFwvZDhqeDJ5NC05ZWE3ZDgwNS00ZGJkLTQ2MGYtODY3Yi1jNDNiZGJkMDUyNGIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.pxZ51qcZNaaCmSvJY2mULfR_FKzia-R42ypTwsbM_5U');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Lora', serif;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+h1 {
+    font-size: 100px;
+    color: rgb(214, 42, 42);
+    text-shadow: 5px 6px 7px rgba(110, 12, 12, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin: 0;
+}
+
 main {
-    background-image: url();
-    justify-content: center;
-    color: black;
-    background-color: black;
+    margin: 0;
+    text-align: center;
+    padding: 20px 0;
+    flex-direction: column;
+    padding-top: 80px;
+    padding: 100px;
+}
+
+label {
+    font-size: 25px;
+    padding-right: 290px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 2px 4px rgba(223, 13, 13, 1);
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 370px;
+    height: 37px;
+    font-size: 24px;
+    padding: 5px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 2px 2px 4px rgba(223, 13, 13, 1);
+}
+
+
+
+#Botao {
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #580707;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: 'Lora', serif;
+    margin: 0;
+
+}
+
+#Botao:hover {
+    background-color: #760505;
+}
+
+#footer {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px rgba(223, 13, 13, 1);
 }
