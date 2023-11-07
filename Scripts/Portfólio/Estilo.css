@@ -3,7 +3,7 @@
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
     box-sizing: border-box;
-   
+    text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
 }
 
 
