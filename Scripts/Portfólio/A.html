@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Estilo.css">
+    <link rel="stylesheet" href="B.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
@@ -18,15 +18,16 @@
 </head>
 
 <body>
-    <div class="background">
+    <div class="background" id="Inicio">
+
         <nav>
             <h2 class="logo">Portfolio</h2>
             <ul class="cabeçalho-link">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sobre mim</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Habilidades</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#SobreMim">Sobre mim</a></li>
+                <li><a href="#Projetos">Projetos</a></li>
+                <li><a href="#Qualidades">Qualidades</a></li>
+                <li><a href="#Contatos">Contato</a></li>
             </ul>
         </nav>
 
@@ -37,18 +38,19 @@
         </div>
     </div>
 
-    <section class="background-color-Sobre">
+    <section class="background-color-Sobre" id="SobreMim">
         <div class="main-sobre">
             <img src="ErickI.jpg" id="IMGP">
             <div class="Text-sobre">
                 <h2>Sobre-mim</h2>
                 <h5><span>Desenvolvedor Full-Stack</span></h5>
-                <p>Eu sou um Desenvolvedor web front-end e back-end, consigo desenvolver sites e aplicações. Tenho 17 anos fiz o curso da despertar (Programação web) sou bom em solucionar problemas. </p>
+                <p>Eu sou um Desenvolvedor web front-end e back-end, consigo desenvolver sites e aplicações. Tenho 17
+                    anos fiz o curso da despertar (Programação web) sou bom em solucionar problemas. </p>
             </div>
         </div>
     </section>
 
-    <div class="Container-serviços">
+    <div class="Container-serviços" id="Projetos">
         <div class="title">
             <h2>Meus Projetos</h2>
         </div>
@@ -58,7 +60,8 @@
                 <i class="fas fa-shopping-bag"></i>
                 <h5>Portfolio Despertar</h5>
                 <div class="Paragrafo-button">
-                    <p>Nesse projeto eu e meu grupo ficamos responsavel de criar um portfolio para todos os alunos de programação web.</p>
+                    <p>Nesse projeto eu e meu grupo ficamos responsavel de criar um portfolio para todos os alunos de
+                        programação web.</p>
                 </div>
             </div>
 
@@ -82,7 +85,7 @@
         </div>
     </div>
 
-    <div class="me-contate">
+    <div class="me-contate" id="Qualidades">
         <h2>Qualidades:</h2>
         <div class="qualidades-lista">
             <div class="qualidades-row">
@@ -114,7 +117,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer id="Contatos">
         <h6>Redes Sociais</h6>
         <p>Erick hiroshi de assis takeshita</p>
         <div class="Redes-sociais">
@@ -129,8 +132,7 @@
     <script>
         AOS.init();
     </script>
-    <script src="Funcao.js"></script>
-
+    <script src="C.js"></script>
 </body>
 
 </html>

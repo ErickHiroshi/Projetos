@@ -15,7 +15,7 @@
 }
 
 .background {
-    background-image: url(FundoPreto.jpg);
+    background-image: url(Fundo.jpg);
     image-rendering: optimizeQuality;
     background-color: #101010;
     height: 100vh;
@@ -31,43 +31,64 @@ body {
     background-color: #191919;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 45px;
+    padding: 15px;
     padding-left: 8%;
     padding-right: 8%;
+    z-index: 1000;
+    width: 100%;
 }
 
-.logo{
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #191919;
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: 100%;
+    margin: auto;
+}
+
+.logo {
     color: #fff;
     font-size: 35px;
     cursor: pointer;
     letter-spacing: 1px;
-}
-span{
-    color: var(--Cor2);
+    user-select: none;
+    padding-top: 20px;
+    user-select: none;
+    pointer-events: none;
 }
 
-nav ul li{
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
     list-style-type: none;
-    display: inline-block;
-    padding: 10px  25px;
 }
 
-nav ul li a{
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     text-transform: capitalize;
+    font-size: 20px;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: var(--Cor2);
     transform: .4s;
 }
-
+span{
+    color: var(--Cor2);
+}
 .btn{
     background-color: var(--Cor2);
     color: #fff;
@@ -77,10 +98,6 @@ nav ul li a:hover{
     padding: 10px 25px;
     border-radius: 30px;
     transition: transform .4s;
-}
-
-.btn:hover{
-    transform: scale(1.2);
 }
 
 .Main{
@@ -271,17 +288,17 @@ h5{
     font-size: 60px;
     font-weight: bold;
     margin-bottom: 35px;
-    text-align: center; /* Adiciona o alinhamento centralizado */
+    text-align: center;
 }
 .me-contate {
     width: 100%;
-    height: 400px; /* Ajuste o valor da altura conforme necessário */
+    height: 400px;
     background-color: #191919;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 0; /* Ajuste o valor do preenchimento conforme necessário */
+    padding: 40px 0;
 }
 
 .qualidades-lista {
@@ -297,46 +314,47 @@ h5{
 
 .qualidade {
     color: #fff;
-    font-size: 24px; /* Ajuste o valor do tamanho da fonte conforme necessário */
-    margin-bottom: 15px; /* Ajuste o valor da margem conforme necessário */
-    padding: 12px 15px; /* Ajuste o valor do preenchimento conforme necessário */
+    font-size: 24px;
+    margin-bottom: 15px;
+    padding: 12px 15px;
     border: 2px solid var(--Cor2);
     border-radius: 20px;
-    width: 280px; /* Ajuste o valor da largura conforme necessário */
+    width: 280px;
     display: flex;
     align-items: center;
-    margin-right: 15px; /* Ajuste o valor da margem conforme necessário */
+    margin-right: 15px;
 }
 
 .qualidade i {
-    margin-right: 8px; /* Ajuste o valor da margem conforme necessário */
+    margin-right: 8px;
 }
 
 .qualidade span {
     display: flex;
     align-items: center;
-    margin-left: 8px; /* Ajuste o valor da margem conforme necessário */
+    margin-left: 8px;
     user-select: none;
 }
 
 
-footer{
-    position: relative;
+footer {
     width: 100%;
-    height: 400px;
+    height: 200px;
     background-color: #101010;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
-footer h6{
+footer h6 {
     font-size: 35px;
     color: #fff;
+    padding-top: 40px;
 }
 
-footer p{
+footer p {
     color: #fff;
     font-size: 15px;
     width: 500px;
@@ -344,19 +362,26 @@ footer p{
     margin-top: 15px;
     letter-spacing: 1px;
     line-height: 23px;
+    margin: 2px;
 }
 
-.Redes-sociais{
-    display: flex; 
+.Redes-sociais {
+    display: flex;
+    
+    padding-bottom: 45px;
+    background-color: #101010;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
-.Redes-sociais a{
+.Redes-sociais a {
     background-color: var(--Cor2);
     width: 45px;
     height: 45px;
     padding: 15px;
     border-radius: 50%;
-    margin: 22px 10px;
+    margin: 8px 8px;
     color: #fff;
     text-decoration: none;
     font-size: 20px;
@@ -366,16 +391,12 @@ footer p{
     flex-direction: row;
 }
 
-.Redes-sociais a:hover{
-    transform: scale(1.2);
-    transition: .3s;
-}
-
-.end{
+.end {
     position: absolute;
     color: #1f6ba1;
-    bottom: 35px;
+    bottom: 0px;
     font-size: 14px ;
+    margin-top: 20px;
 }
 
 .btn, button, .Card {
@@ -418,11 +439,10 @@ a:hover, button:hover, .qualidade:hover {
     color: var(--Cor2);
 }
 
-.Card, #IMGP, .cabeçalho-link li , nav h2, .qualidade{
+.Card, #IMGP, .cabeçalho-link li, .qualidade, .Redes-sociais a, .btn{
     transition: all 0.3s ease;
 }
 
-.Card:hover, #IMGP:hover, .cabeçalho-link li:hover, nav h2:hover, .qualidade:hover {
+.Card:hover, #IMGP:hover, .cabeçalho-link li:hover, .qualidade:hover, .Redes-sociais a:hover, .btn:hover {
     transform: scale(1.1);
 }
-
