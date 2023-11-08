@@ -1,21 +1,31 @@
+:root {
+    --Cor2: rgb(208, 153, 15);
+}
+
 *{
     padding: 0;
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
     box-sizing: border-box;
-    text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.8);
 }
 
+#IMGP {
+    border-radius: 10px;
+}
 
-.background{
-    background-image: url(ErickI.jpg);
+.background {
+    background-image: url(FundoPreto.jpg);
+    image-rendering: optimizeQuality;
     background-color: #101010;
-    background-size: cover;
-    background-position: center;
     height: 100vh;
     width: 100%;
-
-}
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
 
 body {
     background-color: #191919;
@@ -37,7 +47,7 @@ nav{
     letter-spacing: 1px;
 }
 span{
-    color: #f9004d;
+    color: var(--Cor2);
 }
 
 nav ul li{
@@ -54,12 +64,12 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: #f9004d;
+    color: var(--Cor2);
     transform: .4s;
 }
 
 .btn{
-    background-color: #f9004d;
+    background-color: var(--Cor2);
     color: #fff;
     text-decoration: none;
     border: 2px solid transparent;
@@ -81,7 +91,7 @@ nav ul li a:hover{
 }
 
 .Main span{
-    color: #f9004d;
+    color: var(--Cor2)
 }
 
 h1{
@@ -91,7 +101,7 @@ h1{
 }
 
 h4{
-    color: #fcfc;
+    color: white;
     letter-spacing: 2px;
     font-size: 20px;
 }
@@ -112,7 +122,7 @@ h3{
     display: inline-block;
     width: 100%;
     padding: 14px 130px 14px 15px;
-    border: 2px solid #f9004d;
+    border: 2px solid var(--Cor2);
     border-radius: 30px;
     outline: none;
 }
@@ -124,7 +134,7 @@ h3{
     border: none;
     padding: 10px 30px;
     border-radius: 30px;
-    background-color: #f9004d;
+    background-color: var(--Cor2);
     color: #fff;
     box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
     right: 6px;
@@ -172,7 +182,7 @@ h3{
 }
 
 .Text-sobre p{
-    color: #fcfc;
+    color: white;
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
@@ -180,7 +190,7 @@ h3{
 }
 
 button{
-    background-color: #f9004d;
+    background-color: var(--Cor2);
     color: #fff;
     text-transform: none;
     border: 2px solid transparent;
@@ -193,7 +203,7 @@ button{
 
 button:hover{
     background-color: transparent;
-    border: 2px solid #f9004d;
+    border: 2px solid var(--Cor2);
     cursor: pointer;
 }
 
@@ -236,7 +246,7 @@ button:hover{
     display: block;
     text-align: center;
     margin: 25px 0px;
-    color: #f9004d;
+    color: var(--Cor2);
 }
 
 h5{
@@ -246,7 +256,7 @@ h5{
 }
 
 .Paragrafo-button{
-    color: #fcfc;
+    color: white;
     font-size: 16px;
     line-height: 27px;
     margin-bottom: 25px;
@@ -300,12 +310,11 @@ footer p{
 }
 
 .Redes-sociais{
-    display: flex;
-    
+    display: flex; 
 }
 
 .Redes-sociais a{
-    background-color: #f9004d;
+    background-color: var(--Cor2);
     width: 45px;
     height: 45px;
     padding: 15px;
@@ -327,7 +336,56 @@ footer p{
 
 .end{
     position: absolute;
-    color: #f9004d;
+    color: #1f6ba1;
     bottom: 35px;
     font-size: 14px ;
 }
+
+.btn, button, .Card {
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.btn, button, nav ul li a {
+    transition: all 0.3s ease;
+}
+
+.Caixa, .main-sobre, .Container-serviços {
+    gap: 30px;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin-bottom: 15px;
+   
+}
+
+h1, h2, h3, h4, h5, p {
+    transition: all 0.3s ease;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+h2, h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+a:hover, button:hover {
+    color: var(--Cor2);
+}
+
+.Card, #IMGP, .cabeçalho-link li , nav h2 {
+    transition: all 0.3s ease;
+}
+
+.Card:hover, #IMGP:hover, .cabeçalho-link li:hover, nav h2:hover {
+    transform: scale(1.1);
+}
+
