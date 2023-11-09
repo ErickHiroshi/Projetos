@@ -1,0 +1,106 @@
+:root {
+    --CorBase: rgb(208, 153, 15);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.8);
+}
+
+body, html {
+    height: 100%;
+}
+
+.header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.background {
+    background-color: #111;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: var(--CorBase);
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+}
+
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: #141414;
+    width: 100%;
+    height: 100%;
+}
+
+
+.portfolio-item {
+    background: #272727;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    max-height: 44vh; /* Ajuste a altura máxima conforme necessário */
+    overflow: auto; /* Adicione a rolagem se a altura dos itens exceder a altura máxima */
+}
+
+.portfolio-item a {
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+.portfolio-item img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+h3, p, .Idade {
+    margin: 10px 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, .Idade {
+    text-decoration: none;
+    font-weight: 350px;
+    text-transform: capitalize;
+}
+
+.Idade {
+    color: var(--CorBase);
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
