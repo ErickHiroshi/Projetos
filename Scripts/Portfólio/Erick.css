@@ -1,0 +1,453 @@
+:root {
+    --Cor2: rgb(208, 153, 15);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.8);
+}
+
+#IMGP {
+    border-radius: 10px;
+}
+
+.background {
+    background-image: url('https://raw.githubusercontent.com/ErickHiroshi/Projetos/main/Scripts/Portf%C3%B3lio/Fundo.jpg');
+    image-rendering: optimizeQuality;
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+
+body {
+    background-color: #191919;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    padding-left: 8%;
+    padding-right: 8%;
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #191919;
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: 100%;
+    margin: auto;
+}
+
+.logo {
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    user-select: none;
+    padding-top: 20px;
+    user-select: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: var(--Cor2);
+    transform: .4s;
+}
+span{
+    color: var(--Cor2);
+}
+.btn{
+    background-color: var(--Cor2);
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+}
+
+.Main{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+.Main span{
+    color: var(--Cor2)
+}
+
+h1{
+    color: #fff;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+
+h4{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+h3{
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.Container-btn form{
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+}
+
+.Container-btn form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid var(--Cor2);
+    border-radius: 30px;
+    outline: none;
+}
+
+.Container-btn form input:last-child{
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: var(--Cor2);
+    color: #fff;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    right: 6px;
+    top: 6px;
+    
+}
+
+.background-color-Sobre{
+    background-color: #191919;
+    width: 100%;
+    padding: 100px 0px;
+    
+}
+
+.background-color-Sobre img{
+    width: 430px;
+    height: auto;
+}
+
+.Text-sobre{
+    width: 550px;
+  }
+
+.main-sobre{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   width: 1130px;
+   margin: 0 auto;
+}
+
+.Text-sobre h2{
+    color: #fff;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.Text-sobre h5{
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.Text-sobre p{
+    color: white;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+button{
+    background-color: var(--Cor2);
+    color: #fff;
+    text-transform: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 20px;
+    border-radius: 30px;
+    transition: .4s;
+    
+}
+
+button:hover{
+    background-color: transparent;
+    border: 2px solid var(--Cor2);
+    cursor: pointer;
+}
+
+.Container-serviços{
+    background-color: #101010;
+    width: 100%;
+    padding: 100px 0px;
+}
+
+.title h2{
+    color: #fff;
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.Caixa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    flex-wrap: wrap;
+}
+
+.Card{
+    background: #191919;
+    height: 365px;
+    width: 335px;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align:  center;
+    
+}
+
+.Card i{
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+    color: var(--Cor2);
+}
+
+h5{
+    color: #fff;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.Paragrafo-button{
+    color: white;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+
+.Paragrafo-button button{
+    margin-top: 25px;
+}
+
+.me-contate h2 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    text-align: center;
+}
+.me-contate {
+    width: 100%;
+    height: 400px;
+    background-color: #191919;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.qualidades-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qualidades-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.qualidade {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    border: 2px solid var(--Cor2);
+    border-radius: 20px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.qualidade i {
+    margin-right: 8px;
+}
+
+.qualidade span {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    user-select: none;
+}
+
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+footer h6 {
+    font-size: 35px;
+    color: #fff;
+    padding-top: 40px;
+}
+
+footer p {
+    color: #fff;
+    font-size: 15px;
+    width: 500px;
+    text-align: center;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    line-height: 23px;
+    margin: 2px;
+}
+
+.Redes-sociais {
+    display: flex;
+    
+    padding-bottom: 45px;
+    background-color: #101010;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.Redes-sociais a {
+    background-color: var(--Cor2);
+    width: 45px;
+    height: 45px;
+    padding: 15px;
+    border-radius: 50%;
+    margin: 8px 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.end {
+    position: absolute;
+    color: #1f6ba1;
+    bottom: 0px;
+    font-size: 14px ;
+    margin-top: 20px;
+}
+
+.btn, button, .Card {
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.btn, button, nav ul li a {
+    transition: all 0.3s ease;
+}
+
+.Caixa, .main-sobre, .Container-serviços {
+    gap: 30px;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin-bottom: 15px;
+   
+}
+
+h1, h2, h3, h4, h5, p {
+    transition: all 0.3s ease;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+h2, h3 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+a:hover, button:hover, .qualidade:hover, .logo:hover {
+    color: var(--Cor2);
+}
+
+.Card, #IMGP, .cabeçalho-link li, .qualidade, .Redes-sociais a, .btn, .logo{
+    transition: all 0.3s ease;
+}
+
+.Card:hover, #IMGP:hover, .cabeçalho-link li:hover, .qualidade:hover, .Redes-sociais a:hover, .btn:hover, .logo:hover {
+    transform: scale(1.1);
+}
