@@ -1,5 +1,5 @@
 :root {
-    --Cor2: rgb(208, 153, 15);
+    --Cor2: rgb(13, 154, 224);
 }
 
 *{
@@ -15,9 +15,8 @@
 }
 
 .background {
-    background-image: url(Fundo.jpg);
+    background-image: url('https://raw.githubusercontent.com/ErickHiroshi/Projetos/main/Scripts/Portf%C3%B3lio/Fotos/Fundo%20azul.png');
     image-rendering: optimizeQuality;
-    background-color: #101010;
     height: 100vh;
     width: 100%;
     background-attachment: fixed;
@@ -61,7 +60,6 @@ nav {
     user-select: none;
     padding-top: 20px;
     user-select: none;
-    pointer-events: none;
 }
 
 nav ul {
@@ -431,18 +429,25 @@ h2, h3 {
     font-family: 'Open Sans', sans-serif;
 }
 
+.logo {
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
 p {
     font-family: 'Lato', sans-serif;
 }
 
-a:hover, button:hover, .qualidade:hover {
+a:hover, button:hover, .qualidade:hover, .logo:hover {
     color: var(--Cor2);
 }
 
-.Card, #IMGP, .cabeçalho-link li, .qualidade, .Redes-sociais a, .btn{
+.Card, #IMGP, .cabeçalho-link li, .qualidade, .Redes-sociais a, .btn, .logo{
     transition: all 0.3s ease;
 }
 
-.Card:hover, #IMGP:hover, .cabeçalho-link li:hover, .qualidade:hover, .Redes-sociais a:hover, .btn:hover {
+.Card:hover, #IMGP:hover, .cabeçalho-link li:hover, .qualidade:hover, .Redes-sociais a:hover, .btn:hover, .logo:hover {
     transform: scale(1.1);
 }
