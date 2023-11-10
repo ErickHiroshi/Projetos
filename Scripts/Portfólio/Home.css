@@ -12,13 +12,14 @@
 
 body, html {
     height: 100%;
+    background-color: rgb(12, 35, 55);
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #222;
+    background-color: rgb(12, 35, 55);
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -133,10 +134,11 @@ img {
     width: 300px;
     border-radius: 20px;
     border: 1px solid #ddd;
+    text-shadow: none; /* Adicionando esta linha para remover o text-shadow */
 }
 
 #searchInput::placeholder {
-    color: var(--CorBase);
+    color: #3d3d3d;
 }
 
 #searchIcon {
