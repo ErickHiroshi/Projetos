@@ -122,3 +122,26 @@ h1, h2, h3, h4, h5, h6, p, .Idade {
 img {
     image-rendering: optimizeSpeed;
 }
+
+.search {
+    text-align: center;
+    margin: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+#searchInput::placeholder {
+    color: var(--CorBase);
+}
+
+#searchIcon {
+    position: relative;
+    left: -30px;
+    top: 2px;
+    cursor: pointer;
+}
