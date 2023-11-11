@@ -12,14 +12,15 @@
 
 body, html {
     height: 100%;
-    background-color: rgb(12, 35, 55);
+    background-color: #141414;
 }
 
 .header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(12, 35, 55);
+    background-image: url('https://raw.githubusercontent.com/ErickHiroshi/Projetos/main/Scripts/Portf%C3%B3lio/Fotos/FundoAmarelo.jpg');
+    image-rendering: optimizeQuality;;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -55,11 +56,12 @@ body, html {
     margin-bottom: 40px;
 }
 
-h1 {
+.header h1 {
     color: var(--CorBase);
     font-size: 48px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    margin-bottom: 20px;
+    margin-bottom: 10x;
+    margin-left: 20px;
     pointer-events: none;
     user-select: none;
 }
@@ -79,11 +81,11 @@ h1 {
     color: #f5f5f5;
     text-align: center;
     padding: 10px;
-    margin: 10px;
+    margin: 15px;
     border-radius: 4%;
     cursor: pointer;
     transition: all 0.3s ease;
-    max-height: 44vh;
+    max-height: 45vh;
     overflow: auto;
     user-select: none;
 }
