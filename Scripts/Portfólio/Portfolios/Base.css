@@ -1,5 +1,37 @@
 :root {
+    --Cor2: black;
+}
+
+.azul {
+    --Cor2: rgb(13, 154, 224);
+}
+
+.amarelo {
     --Cor2: rgb(208, 153, 15);
+}
+
+.rosa {
+    --Cor2: rgb(241, 57, 185);
+}
+
+.roxo {
+    --Cor2: rgb(138, 36, 151);
+}
+
+body.amarelo {
+    --Cor2: rgb(208, 153, 15);
+}
+
+body.azul {
+    --Cor2: rgb(13, 154, 224);
+}
+
+body.rosa {
+    --Cor2: rgb(241, 57, 185);
+}
+
+body.roxo {
+    --Cor2: rgb(138, 36, 151);
 }
 
 *{
@@ -450,4 +482,15 @@ a:hover, button:hover, .qualidade:hover, .logo:hover {
 
 .Card:hover, #IMGP:hover, .cabeçalho-link li:hover, .qualidade:hover, .Redes-sociais a:hover, .btn:hover, .logo:hover {
     transform: scale(1.1);
+}
+
+.aos-init {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
 }

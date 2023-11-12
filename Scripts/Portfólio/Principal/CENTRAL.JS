@@ -38,3 +38,16 @@ function filterPortfolio() {
         }
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    var body = document.body;
+    if (body.classList.contains('azul')) {
+        document.getElementById('IMGP').style.color = 'blue';
+    } else if (body.classList.contains('amarelo')) {
+        document.getElementById('IMGP').style.color = 'yellow';
+    } else if (body.classList.contains('rosa')) {
+        document.getElementById('IMGP').style.color = 'pink';
+    } else if (body.classList.contains('roxo')) {
+        document.getElementById('IMGP').style.color = 'purple';
+    }
+});
