@@ -1,35 +1,35 @@
 :root {
     --Cor2: black;
-    --FundoI: url('NIL');
-    --BaseURL: 'https://raw.githubusercontent.com/ErickHiroshi/Projetos/main/Scripts/Portf%C3%B3lio/Fundos/';
+    --FundoI: url('nil');
+
 }
 
 body.amarelo {
     --Cor2: rgb(208, 153, 15);
-    --FundoI: url(var(--BaseURL)'FundoAmarelo.jpg');
+    --FundoI: url('https://raw.githubusercontent.com/ErickHiroshi/Projetos/main/Scripts/Portf%C3%B3lio/Fundos/FundoAmarelo.jpg');
 }
 
 body.azul {
     --Cor2: rgb(13, 154, 224);
-    --FundoI: url(var(--BaseURL)'FundoAzul.png');
+    --FundoI: url('https://raw.githubusercontent.com/ErickHiroshi/Projetos/main/Scripts/Portf%C3%B3lio/Fundos/FundoAzul.png');
 }
 
 body.rosa {
     --Cor2: rgb(241, 57, 185);
-    --FundoI: url(var(--BaseURL)'FundoRosa.png');
+    --FundoI: url('https://raw.githubusercontent.com/ErickHiroshi/Projetos/main/Scripts/Portf%C3%B3lio/Fundos/FundoRosa.png');
 }
 
 body.roxo {
     --Cor2: rgb(138, 36, 151);
-    --FundoI: url(var(--BaseURL)'FundoRoxo.png');
+    --FundoI: url('https://raw.githubusercontent.com/ErickHiroshi/Projetos/main/Scripts/Portf%C3%B3lio/Fundos/FundoRoxo.png');
 }
 body.verde {
     --Cor2: rgb(29, 100, 35);
-    --FundoI: url(var(--BaseURL)'FundoVerde.png');
+    --FundoI: url('https://raw.githubusercontent.com/ErickHiroshi/Projetos/main/Scripts/Portf%C3%B3lio/Fundos/FundoVerde.png');
 }
 body.cinza {
     --Cor2: rgb(53, 53, 53);
-    --FundoI: url(var(--BaseURL)'FundoCinza.png');
+    --FundoI: url('https://raw.githubusercontent.com/ErickHiroshi/Projetos/main/Scripts/Portf%C3%B3lio/Fundos/FundoCinza.png');
 }
 
 *{
