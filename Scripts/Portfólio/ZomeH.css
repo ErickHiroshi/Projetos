@@ -1,5 +1,29 @@
 :root {
-    --CorBase: rgb(243, 185, 38);
+    --CorBase: black;
+}
+p.Idade {
+    color: var(--CorBase);
+}
+p.Idade.amarelo {
+    --CorBase: rgb(208, 153, 15);
+}
+p.Idade.azul {
+    --CorBase: rgb(13, 154, 224);
+}
+p.Idade.rosa {
+    --CorBase: rgb(241, 57, 185);
+}
+p.Idade.roxo {
+    --CorBase: rgb(138, 36, 151);
+}
+p.Idade.verde {
+    --CorBase: rgb(29, 100, 35);
+}
+p.Idade.cinza {
+    --CorBase: rgb(146, 146, 146);
+}
+p.Idade.vermelho {
+    --CorBase: rgb(226, 69, 69);
 }
 
 * {
@@ -33,10 +57,9 @@ html {
 }
 
 .header img {
-    width: 75px;
-    margin-bottom: 1px;
-    margin-right: 5px;
-    pointer-events: none;
+    width: 110px;
+   margin-top: 1px;
+    margin-right: 4px;
     user-select: none;
 }
 
@@ -54,10 +77,9 @@ html {
 }
 
 .header h1 {
-    color: var(--CorBase);
-    font-size: 48px;
+    color: yellow;
+    font-size: 60px;
     margin-bottom: 35px;
-    pointer-events: none;
     user-select: none;
 }
 
@@ -66,7 +88,6 @@ html {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
-    padding-top: 60px;
     background-color: #141414;
     width: 100%;
     height: 100%;
@@ -137,21 +158,25 @@ p,
 }
 
 #searchInput {
-    padding: 10px;
-    margin-left: 25px;
+    padding: 8px;
     width: 400px;
     border-radius: 20px;
     border: 1px solid #ddd;
     text-shadow: none;
+    position: relative;
+    left: -180px;
+    top: 5px;
 }
 
 #searchInput::placeholder {
     color: #3d3d3d;
-}
+} 
 
-#searchIcon {
+.search h2 {
+    font-size: 50px;
+    color: white;
     position: relative;
-    left: -30px;
-    top: 2px;
-    cursor: pointer;
+    left: -500px;
+    top: 45px;
+    user-select: none;
 }

@@ -23,18 +23,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     var body = document.body;
-    if (body.classList.contains('azul')) {
+    var p = this.document.p;
+
+    if (body.classList.contains('azul') && p.classList.contains('azul')) {
         document.getElementById('IMGP').style.color = 'blue';
-    } else if (body.classList.contains('amarelo')) {
+    } else if (body.classList.contains('amarelo') && p.classList.contains('amarelo')) {
         document.getElementById('IMGP').style.color = 'yellow';
-    } else if (body.classList.contains('rosa')) {
+    } else if (body.classList.contains('rosa') && p.classList.contains('rosa')) {
         document.getElementById('IMGP').style.color = 'pink';
-    } else if (body.classList.contains('roxo')) {
+    } else if (body.classList.contains('roxo') && p.classList.contains('roxo')) {
         document.getElementById('IMGP').style.color = 'purple';
-    } else if (body.classList.contains('verde')) {
+    } else if (body.classList.contains('verde') && p.classList.contains('verde')) {
         document.getElementById('IMGP').style.color = 'green';
-    } else if (body.classList.contains('cinza')) {
+    } else if (body.classList.contains('cinza') && p.classList.contains('cinza')) {
         document.getElementById('IMGP').style.color = 'gray';
+    } else if (body.classList.contains('vermleho') && p.classList.contains('vermelho')) {
+        document.getElementById('IMGP').style.color = 'vermleho';
     }
 });
 
