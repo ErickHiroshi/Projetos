@@ -1,10 +1,26 @@
-document.addEventListener("scroll", function () {
-    let scrolled = window.pageYOffset;
-    let background = document.querySelector(".background");
-    background.style.backgroundPositionY = -scrolled * 0.5 + "px";
-});
+document.addEventListener('DOMContentLoaded', function () {
+    var body = document.body;
+    var paragraphs = document.querySelectorAll('p.Idade');
 
-document.addEventListener("DOMContentLoaded", function () {
+    var colorMap = {
+        'azul': 'blue',
+        'amarelo':'yellow',
+        'rosa': 'pink',
+        'roxo': 'purple',
+        'verde': 'green',
+        'cinza': 'gray',
+        'vermleho':'red'
+    };
+
+    paragraphs.forEach(paragraph => {
+        for (var color in colorMap) {
+            if (body.classList.contains(color) && paragraph.classList.contains(color)) {
+                document.getElementById('IMGP').style.color = colorMap[color];
+                break;
+            }
+        }
+    });
+
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(link => {
         link.addEventListener("click", function (e) {
@@ -19,43 +35,59 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
+
+    bubbleSort();
+    filterAndShowItems();
+
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    var body = document.body;
-    var p = this.document.p;
+function bubbleSort() {
+    let items = document.querySelectorAll('.portfolio-item');
+    let len = items.length;
+    let swapped;
 
-    if (body.classList.contains('azul') && p.classList.contains('azul')) {
-        document.getElementById('IMGP').style.color = 'blue';
-    } else if (body.classList.contains('amarelo') && p.classList.contains('amarelo')) {
-        document.getElementById('IMGP').style.color = 'yellow';
-    } else if (body.classList.contains('rosa') && p.classList.contains('rosa')) {
-        document.getElementById('IMGP').style.color = 'pink';
-    } else if (body.classList.contains('roxo') && p.classList.contains('roxo')) {
-        document.getElementById('IMGP').style.color = 'purple';
-    } else if (body.classList.contains('verde') && p.classList.contains('verde')) {
-        document.getElementById('IMGP').style.color = 'green';
-    } else if (body.classList.contains('cinza') && p.classList.contains('cinza')) {
-        document.getElementById('IMGP').style.color = 'gray';
-    } else if (body.classList.contains('vermleho') && p.classList.contains('vermelho')) {
-        document.getElementById('IMGP').style.color = 'vermleho';
-    }
-});
+    do {
+        swapped = false;
+
+        for (let i = 0; i < len - 1; i++) {
+            let currentName = items[i].querySelector('h3').innerText;
+            let nextName = items[i + 1].querySelector('h3').innerText;
+
+            if (currentName.toLowerCase() > nextName.toLowerCase()) {
+                let temp = items[i].innerHTML;
+                items[i].innerHTML = items[i + 1].innerHTML;
+                items[i + 1].innerHTML = temp;
+                swapped = true;
+            }
+        }
+    } while (swapped);
+}
+
+function filterAndShowItems() {
+    filterPortfolio();
+    showItems();
+}
 
 function filterPortfolio() {
-    var input, filter, portfolioItems, a, h3, i, txtValue;
-    input = document.getElementById('searchInput');
-    filter = input.value.toUpperCase();
-    portfolioItems = document.getElementsByClassName('portfolio-item');
+    var input = document.getElementById('searchInput');
+    var filter = input.value.toUpperCase();
+    var portfolioItems = document.querySelectorAll('.portfolio-item');
 
-    for (i = 0; i < portfolioItems.length; i++) {
-        h3 = portfolioItems[i].getElementsByTagName('h3')[0];
-        txtValue = h3.textContent || h3.innerText;
+    portfolioItems.forEach(item => {
+        var h3 = item.querySelector('h3');
+        var txtValue = h3.textContent || h3.innerText;
 
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            portfolioItems[i].style.display = '';
+            item.style.display = 'flex';
         } else {
-            portfolioItems[i].style.display = 'none';
+            item.style.display = 'none';
         }
-    }
+    });
+}
+
+function showItems() {
+    let items = document.querySelectorAll('.portfolio-item');
+    items.forEach(item => {
+        item.style.display = 'flex';
+    });
 }
