@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var colorMap = {
         'azul': 'blue',
-        'amarelo':'yellow',
+        'amarelo': 'yellow',
         'rosa': 'pink',
         'roxo': 'purple',
         'verde': 'green',
         'cinza': 'gray',
-        'vermleho':'red'
+        'vermleho': 'red'
     };
 
     paragraphs.forEach(paragraph => {
@@ -66,6 +66,7 @@ function bubbleSort() {
 function filterAndShowItems() {
     filterPortfolio();
     showItems();
+    smoothScrollToItem();
 }
 
 function filterPortfolio() {
@@ -83,11 +84,77 @@ function filterPortfolio() {
             item.style.display = 'none';
         }
     });
+    smoothScrollToItem();
 }
+
 
 function showItems() {
     let items = document.querySelectorAll('.portfolio-item');
     items.forEach(item => {
         item.style.display = 'flex';
+        smoothScrollToItem();
     });
+}
+
+function doScrolling(elementY, duration) {
+    var startingY = window.pageYOffset;
+    var diff = elementY - startingY;
+    var start;
+
+    window.requestAnimationFrame(function step(timestamp) {
+        if (!start) start = timestamp;
+        var time = timestamp - start;
+        var percent = Math.min(time / duration, 1);
+
+        window.scrollTo(0, startingY + diff * percent);
+
+        if (time < duration) {
+            window.requestAnimationFrame(step);
+        }
+    })
+}
+
+function smoothScrollToItem() {
+    const filter = document.getElementById('searchInput').value.toUpperCase();
+
+    if (filter.trim() !== '') {
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const filteredItems = Array.from(portfolioItems).filter(item => {
+            const h3 = item.querySelector('h3');
+            const txtValue = h3.textContent || h3.innerText;
+            return txtValue.toUpperCase().indexOf(filter) > -1;
+        });
+
+
+        if (filteredItems.length > 0) {
+            const firstItem = filteredItems[0];
+            const offsetTop = firstItem.getBoundingClientRect().top + window.pageYOffset - 50;
+            const start = window.pageYOffset;
+            const end = offsetTop;
+            const distance = end - start;
+            const duration = 650;
+
+            let startTime = null;
+
+            function scrollAnimation(currentTime) {
+                if (startTime === null) { startTime = currentTime; }
+
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, start, distance, duration);
+
+                window.scrollTo(0, run);
+
+                if (timeElapsed < duration) { requestAnimationFrame(scrollAnimation); }
+            }
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+            requestAnimationFrame(scrollAnimation);
+        }
+    } else {
+        window.scrollTo(0, run);
+    }
 }
