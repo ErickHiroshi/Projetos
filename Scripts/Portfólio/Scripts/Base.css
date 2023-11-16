@@ -38,6 +38,11 @@ body.vermelho {
     --FundoI: url('https://raw.githubusercontent.com/ErickHiroshi/Projetos/main/Scripts/Portf%C3%B3lio/Fundos/FundoVermelho.png');
 }
 
+body.vermelho {
+    --Cor2: rgb(74, 40, 40);
+    --FundoI: url('https://raw.githubusercontent.com/ErickHiroshi/Projetos/main/Scripts/Portf%C3%B3lio/Fundos/FundoMarrom.png');
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -98,6 +103,13 @@ nav {
     padding-left: 30px;
     user-select: none;
 }
+
+#Logo {
+    image-rendering: optimizeQuality;
+    padding-top: 30px;
+    padding-left: 0px;
+}
+
 
 nav ul {
     display: flex;

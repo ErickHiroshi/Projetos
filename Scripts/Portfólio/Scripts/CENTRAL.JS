@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
         'roxo': 'purple',
         'verde': 'green',
         'cinza': 'gray',
-        'vermleho': 'red'
+        'vermleho': 'red',
+        'marrom': 'brown',
     };
 
     paragraphs.forEach(paragraph => {
