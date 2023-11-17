@@ -100,8 +100,7 @@ nav {
     cursor: pointer;
     letter-spacing: 1px;
     user-select: none;
-    margin-top: -120px;
-    margin-left: 40px;
+    margin-top: 30px;
 }
 
 
@@ -109,8 +108,6 @@ nav {
 nav ul {
     display: flex;
     align-items: center;
-    margin-top: -120px;
-    padding-left: 65%;
     gap: 25px;
 }
 
