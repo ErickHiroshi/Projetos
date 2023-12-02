@@ -10,7 +10,7 @@ local love = love
 
 function love.load()
     -- Tela
-    love.window.setMode(0, 0, {fullscreen = true})
+    love.window.setMode(0, 0, { fullscreen = true })
 
     -- Background
     backgroundImage = love.graphics.newImage("BackgroundImage.jpg")
