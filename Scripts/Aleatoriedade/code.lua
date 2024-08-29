@@ -12,88 +12,80 @@ local BLOCKED_ASSETS = {
 local BLOCKED_NAMES = {"evon", "codex", "delta", "hydro", "undtc"}
 local BLOCKED_KEYWORDS = { "evon", "loader" }
 
-local env = getfenv()
-
-for level = 0, 1 do
+do
+   local env = getfenv(0)
+      for level = 0, 1 do
 	env = getfenv(level)
 	env.script = nil
+    end
 end
 
-local scriptVar = script
-scriptVar.Parent = nil
-scriptVar = nil
-
-
 local Player = Players.LocalPlayer
-local PlayerGui = Player:WaitForChild("PlayerGui") 
+local PlayerGui = Player:WaitForChild("PlayerGui")
 
-local function GuiCheck(instance: ScreenGui)
+local function checkGui(instance: ScreenGui)
 	local name = string.lower(instance.Name)
-
 	for _, keyword in ipairs(BLOCKED_KEYWORDS) do
 		if string.find(name, keyword) then
-			Player:Kick(`Loader on playergui`)
+			Player:Kick("Loader detected in PlayerGui")
 			return
 		end
 	end
 end
-PlayerGui.ChildAdded:Connect(GuiCheck)
 
+PlayerGui.ChildAdded:Connect(checkGui)
 for _, gui in ipairs(PlayerGui:GetChildren()) do
-	GuiCheck(gui)
+	checkGui(gui)
 end
 
-local function Callback(assetId, assetFetchStatus, ...)
+local function checkAsset(assetId)
 	assetId = assetId:lower():gsub("^rbxassetid://", ""):gsub("^rbxasset://", "")
 
 	if table.find(BLOCKED_ASSETS, assetId) then
-		Player:Kick(`A blocked asset was detected in CoreGui: {assetId}!`)
-		return
+		Player:Kick("Blocked asset detected in CoreGui: " .. assetId)
+		return true
 	end
 
 	for _, blockedName in ipairs(BLOCKED_NAMES) do
 		if string.find(assetId, blockedName) then
-			Player:Kick(`A blocked name was detected in CoreGui: {assetId} (matched with {blockedName})!`)
-			return
+			Player:Kick("Blocked name detected in CoreGui: " .. assetId .. " (matched with " .. blockedName .. ")")
+			return true
+		end
+	end
+
+	return false
+end
+
+local function monitorServices()
+	local essentialServices = {
+		game:GetService("CoreGui"),
+		game:GetService("LogService"),
+		game:GetService("HttpService"),
+		game:GetService("CorePackages"),
+		game:GetService("TeleportService"),
+		game:GetService("ReplicatedFirst"),
+	}
+
+	local metatable = setmetatable({}, { __mode = "v" })
+	for _, service in ipairs(essentialServices) do
+		metatable[service] = service
+	end
+
+	while task.wait(1) do
+		for service, reference in pairs(metatable) do
+			if not reference then
+				Player:Kick("Critical service wasn't garbage collected in time!")
+				return
+			end
 		end
 	end
 end
 
-
-
-RunService.Heartbeat:Connect(function() task.wait(1)
-	local success, errorMsg = pcall(function()
-		local replicatedFirst = game:GetService("ReplicatedFirst")
-
-		local metatable = setmetatable({
-			game:GetService("CoreGui"),
-			game:GetService("LogService"),
-			game:GetService("HttpService"),
-			game:GetService("CorePackages"),
-			game:GetService("TeleportService"),
-			replicatedFirst,
-			replicatedFirst.FinishedReplicating,
-			Players.PlayerAdded,
-			game.Loaded,
-			["Müsli"] = {}, 
-		}, {
-			__mode = "v", 
-		})
-
-		replicatedFirst = nil
-
-		repeat
-			task.wait()
-		until not metatable["Müsli"]
-
-		for index, value in pairs(metatable) do
-			if value then
-				Player.Kick(Player, `Object "{value}" (at {index}) wasn't garbage collected in time!`)
-			end
-		end
-	end)
-
+RunService.Heartbeat:Connect(function()
+	local success, errorMsg = pcall(monitorServices)
 	if not success then 
-		Player.Kick(Player, "Not Success: " .. errorMsg)
+		Player:Kick("Anti-hack error: " .. errorMsg)
 	end
 end)
+
+ContentProvider.PreloadAsync(BLOCKED_ASSETS, checkAsset)
