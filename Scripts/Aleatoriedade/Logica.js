@@ -30,6 +30,8 @@ function RandomFruit() {
     return Fruta;
 }
 
+HELLO
+
 var A = 0;
 var B = 0;
 
